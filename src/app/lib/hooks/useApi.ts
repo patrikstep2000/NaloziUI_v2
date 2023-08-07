@@ -17,7 +17,11 @@ const useApi = () => {
         return await axios.patch(`${link}/${id}`, data, {signal: controller?.signal});
     }
 
-    return {get, post, patch};
+    const Delete = async (link: string, id:string, controller?: AbortController) => {
+        return await axios.delete(`${link}/${id}`, {signal: controller?.signal});
+    }
+
+    return {get, post, patch, Delete};
 }
 
 export default useApi;

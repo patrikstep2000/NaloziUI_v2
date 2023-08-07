@@ -27,7 +27,7 @@ const OrderGeneralTab: React.FC<{
 
     (async () => {
       setMaterialLoading(true);
-      await connector.get(`${ApiUrls.Material}`, controller)
+      await connector.get(`${ApiUrls.Materials}`, controller)
       .then((result) =>{
           setMaterials(
             result.data.data?.filter((material: Partial<MaterialType>) => {

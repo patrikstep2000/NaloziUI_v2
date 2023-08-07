@@ -34,7 +34,7 @@ export default function CreateOrderPage() {
   const [order, setOrder] = useState<OrderType>(initOrder);
 
   useEffect(() => {
-    if(session?.user){
+    if(session?.user.id){
       setOrder(prev => ({...prev, user: {
         id: session?.user.id
       }}))

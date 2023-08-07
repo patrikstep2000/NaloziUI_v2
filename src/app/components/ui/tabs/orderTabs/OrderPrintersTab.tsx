@@ -49,7 +49,7 @@ const OrderPrintersTab: React.FC<{
       setMaterialLoading(true);
 
       await connector
-        .get(`${ApiUrls.Material}`, controller)
+        .get(`${ApiUrls.Materials}`, controller)
         .then((result) => {
           setMaterials(result.data.data);
           setFullMaterials(result.data.data);

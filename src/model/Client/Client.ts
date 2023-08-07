@@ -8,7 +8,7 @@ export type Point={
 }
 
 type ClientType={
-    id:number,
+    id?:number,
     name:string,
     oib:string,
     erp:number,
